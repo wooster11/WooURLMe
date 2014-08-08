@@ -8,7 +8,7 @@
             type: 'POST',
             url: '../api/WooURL',
             contentType: 'application/json',
-            data: ko.toJSON({ longUrl: formElement["LongURLValue"].value }),
+            data: ko.toJSON({ longUrl: formElement['LongURLValue'].value }),
             beforeSend: function () {
                 self.wooUrl('');
                 self.isSubmitEnabled(false);
@@ -19,6 +19,7 @@
                 self.wooUrl(data);
         })
         .always(function () {
+            formElement['LongURLValue'].value = '';
             self.isSubmitEnabled(true);
         });
     }
