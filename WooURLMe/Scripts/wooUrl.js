@@ -1,6 +1,6 @@
 ﻿function WooUrlViewModel() {
     self = this;
-    self.wooUrl = ko.observable('http://wooURL.me/4cj2Z');
+    self.wooUrl = ko.observable('');
     self.isSubmitEnabled = ko.observable(true);
 
     self.submitURL = function (formElement) {
