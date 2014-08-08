@@ -9,6 +9,13 @@
             </div>
         </form>
     </div>
+    <div class="row extra-padding" data-bind="if: !isSubmitEnabled()">
+        <div class="row"><i class="fa fa-spinner fa-spin fa-5x"></i></div>
+        <br />
+        <div class="row">
+            <span class="fa-lg">WooURLing your URL...</span>
+        </div>
+    </div>
     <div class="row extra-padding">
         <h1 data-bind="text: wooUrl"></h1>
     </div>
