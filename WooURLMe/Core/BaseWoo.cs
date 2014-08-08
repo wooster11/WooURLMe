@@ -7,7 +7,7 @@ namespace WooURLMe.Core
 {
 	public class BaseWoo
 	{
-		private const string BASEWOOCHARACTERS = "123456789BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz";
+		private const string BASEWOOCHARACTERS = "KJbP6hf8vFBDrYzLGdkTQtp9ZcC2Hl4wxnNgMyjm5Vs7qW31RXS";
 
 		public static string BaseWooEncode(int numberToConvert)
 		{
