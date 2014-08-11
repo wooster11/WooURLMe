@@ -1,7 +1,12 @@
 ﻿<div class="col-xs-8 col-xs-offset-2 text-center">
+    <div class="row" data-bind="if: isInvalidURL">
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>Please enter a valid URL.
+        </div>
+    </div>
     <div class="row">
         <form id="CreateWooURLForm" role="form" data-bind="submit: submitURL">
-            <div class="form-group">
+            <div class="form-group" data-bind="css: { 'has-error': isInvalidURL, 'has-feedback': isInvalidURL }">
                 <input type="text" class="form-control" id="LongURLValue" placeholder="Enter your long URL here (http://thisisomesortofobnoxiouslylongurlthatisunreadable)" />
             </div>
             <div class="form-group">
