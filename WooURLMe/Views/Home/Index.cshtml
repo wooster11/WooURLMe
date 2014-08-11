@@ -16,7 +16,16 @@
             <span class="fa-lg">WooURLing your URL...</span>
         </div>
     </div>
-    <div class="row extra-padding">
-        <h1 data-bind="text: wooUrl"></h1>
+    <div class="row extra-padding" data-bind="if: wooUrl().length > 0">
+        <h1 data-bind="text: wooUrl"></h1>&nbsp;
+        <a href="" data-bind="attr: { href: wooUrl }" data-toggle="tooltip" data-placement="left" title="Open Link in Current Tab"><span class="glyphicon glyphicon-link"></span></a>&nbsp;&nbsp;
+        <a href="" target="_blank" data-bind="attr: { href: wooUrl }" data-toggle="tooltip" data-placement="right" title="Open Link in New Tab"><span class="glyphicon glyphicon-new-window"></span></a>
+    </div>
+    <div class="row text-muted extra-padding" data-bind="if: originalLink().length > 0">
+        <h4>Original Link:<br/><span data-bind="text: originalLink"></span></h4>
+        <p>
+            <a href="" data-bind="attr: { href: originalLink }" data-toggle="tooltip" data-placement="left" title="Open Link in Current Tab"><span class="glyphicon glyphicon-link"></span></a>&nbsp;&nbsp;
+            <a href="" target="_blank" data-bind="attr: { href: originalLink }" data-toggle="tooltip" data-placement="right" title="Open Link in New Tab"><span class="glyphicon glyphicon-new-window"></span></a>
+        </p>
     </div>
 </div>

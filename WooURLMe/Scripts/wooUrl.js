@@ -1,6 +1,7 @@
 ﻿function WooUrlViewModel() {
     self = this;
     self.wooUrl = ko.observable('');
+    self.originalLink = ko.observable('');
     self.isSubmitEnabled = ko.observable(true);
 
     self.submitURL = function (formElement) {
@@ -11,12 +12,16 @@
             data: ko.toJSON({ longUrl: formElement['LongURLValue'].value }),
             beforeSend: function () {
                 self.wooUrl('');
+                self.originalLink('');
                 self.isSubmitEnabled(false);
             }
         })
         .done(function (data) {
-            if (data != null)
+            if (data != null) {
                 self.wooUrl(data);
+                self.originalLink(formElement['LongURLValue'].value);
+                $('[data-toggle="tooltip"]').tooltip(); //Enable tooltips
+            }
         })
         .always(function () {
             formElement['LongURLValue'].value = '';
