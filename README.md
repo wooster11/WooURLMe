@@ -12,4 +12,6 @@ Technologies used:
 * Knockout JS
 * Bootstrap
 
+This site is currently deployed to AppHarbor: http://woourlme.apphb.com
 
+I should also note that this is a really good candidate to use a NoSQL database. I have yet to learn any of the available technologies but may tackle that sometime later.
